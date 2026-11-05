@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Washington State Electric Vehicle Adoption</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="title-row">
+            <h1>How is Electric Vehicle adoption in Washington Spread out?</h1>
+            <div id="type-toggle" role="group" aria-label="Vehicle type">
+                    <button data-type="ALL">ALL</button>
+                    <button data-type="BEV">BEV</button>
+                    <button data-type="PHEV">PHEV</button>
+            </div>
+        </div>
+        <div id="controls">
+            <div id="chips"></div>
+            <button id="reset">Reset all</button>
+        </div>
+        <p id="summary">Loading...</p>
+    </header>
+    <!--View 1 (top left EV by makes)-->
+    <main id="dashboard">
+        <section class="view" id="makes-view">
+            <div class="view-head">
+                <h2 id="makes-title">EVs by make</h2>
+                <button class="back" id="makes-back">All makes</button>
+            </div>
+            <svg id="makes"></svg>
+            <p class="caption">Click on a make to see data for its models and shift other views to data on respective make</p>
+        </section>
+
+        <!--View 2 (bottom left EV by model year)-->
+        <section class="view" id="modelYear-view">
+            <div class="view-head"><h2 id="modelYear-title">EVs by model year</h2></div>
+            <svg id="modelYear"></svg>
+            <p class="caption">Drag across the bars to select range of model years. 2026-2027 are partial years.</p>
+        </section>
+
+        <!--View 3 (right side EV by County)-->
+        <section class="view" id="counties-view">
+            <div class="view-head"><h2 id="counties-title">EVs by county</h2>
+            <button class="back" id="counties-back">All counties</button>
+            </div>
+            <svg id="counties"></svg>
+            <p class="caption">Click on a county to see data for its cities and shift other views to data on respective county</p>
+        </section>
+
+        <!--Main view (map of Washington)-->
+        <section class="view" id="map-view">
+            <div class="view-head"><h2 id="map-title">Where Washington's EVs are registered</h2></div>
+            <svg id="map"></svg>
+            <div id="map-legend"></div>
+            <p class="caption">Counties are shaded by their EV count on a log scale. Arrows are cities, the larger the arrow, the more EVs are registered in that city. Scroll to zoom, drag to pan, click on a county to select it and shift other views to focus on it.</p>
+        </section>
+    </main>
+
+    <div id="tooltip"></div>
+
+     <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
