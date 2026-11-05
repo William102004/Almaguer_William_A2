@@ -76,6 +76,8 @@ curl -L -o data/ev_population.csv "https://data.wa.gov/api/v3/views/f6w7-q2d2/ex
 curl -L -o data/counties-10m.json https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json
 ```
 
+If the download fails, use the included sample: `cp data/sample_ev_population.csv data/ev_population.csv`
+
 ### 5. Configure environment variables
 
 Create a file named `backend/.env` containing:
