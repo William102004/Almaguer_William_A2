@@ -24,7 +24,7 @@ Almaguer_William_A2/
 └── frontend/
     ├── index.html
     ├── css/
-    │   └── styles.css
+    │   └── style.css
     └── js/
         └── script.js
 ```
