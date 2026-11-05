@@ -1,5 +1,5 @@
 
-const DEPLOYED_API = "https://almaguer-william-a2.onrender.com/";
+const DEPLOYED_API = "https://almaguer-william-a2.onrender.com";
 const API_BASE = ["localhost", "127.0.0.1"].includes(location.hostname)
   ? "http://localhost:8000"
   : DEPLOYED_API;
